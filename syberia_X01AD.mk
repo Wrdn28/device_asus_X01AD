@@ -22,16 +22,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/asus/X01AD/device.mk)
 
 # Inherit some common Pixel OS stuff.
-$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
+$(call inherit-product, vendor/syberia/config/common.mk)
 
 # Set shipping API level
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
+# Flags
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_USES_BLUR := false
+TARGET_USES_AOSP_CHARGER := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_EXCLUDES_AUDIOFX := true
 
 # Device identifiers.
-PRODUCT_NAME := voltage_X01AD
+PRODUCT_NAME := syberia_X01AD
 PRODUCT_DEVICE := X01AD
 PRODUCT_MANUFACTURER := asus
 PRODUCT_BRAND := asus
